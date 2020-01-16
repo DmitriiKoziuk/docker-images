@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install xhprof-2.1.4 \
     && pecl install imagick-3.4.4 \
     && pecl install xdebug-2.9.0 \
-    && docker-php-ext-enable mcrypt redis xhprof imagick \
+    && docker-php-ext-enable mcrypt redis xhprof imagick opcache \
     && cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && chown www-data:www-data /usr/local/bin/composer \
