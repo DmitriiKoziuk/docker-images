@@ -1,6 +1,6 @@
 FROM php:7.3.13-fpm
 
-MAINTAINER Dmitrii Kozyuk <dmitrii.kozyuk@gmail.com>
+MAINTAINER Dmitrii Kozyuk <dmitriikoziuk@gmail.com>
 
 RUN apt-get update && apt-get install -y \
         g++ \
