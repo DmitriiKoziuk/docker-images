@@ -1,4 +1,4 @@
-FROM php:8.1.0beta2-fpm
+FROM php:8.1.16-fpm
 
 MAINTAINER Dmitrii Kozyuk <dmitriikoziuk@gmail.com>
 
@@ -21,8 +21,8 @@ RUN apt-get update && apt-get install -y \
         && docker-php-ext-configure zip && docker-php-ext-install zip \
         && docker-php-ext-configure intl && docker-php-ext-install intl \
         && docker-php-ext-configure pcntl --enable-pcntl && docker-php-ext-install pcntl \
-        && pecl install mcrypt-1.0.4 && docker-php-ext-enable mcrypt \
-        && pecl install redis-5.3.4 && docker-php-ext-enable redis \
+        && pecl install mcrypt-1.0.6 && docker-php-ext-enable mcrypt \
+        && pecl install redis-5.3.7 && docker-php-ext-enable redis \
         #&& pecl install xhprof-2.2.3 \
         && cd ~ && git clone https://github.com/longxinH/xhprof.git && cd ./xhprof/extension/ \
         && phpize && ./configure --with-php-config=/usr/local/bin/php-config && make && make install && cd ~ && rm -rf ./xhprof \
