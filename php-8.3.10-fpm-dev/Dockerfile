@@ -1,4 +1,4 @@
-FROM dmitriikoziuk/php-8.3.10-fpm:1.0.0
+FROM dmitriikoziuk/php-8.3.10-fpm:3.0.0
 
 LABEL org.opencontainers.image.authors="dmitriikoziuk@gmail.com"
 
